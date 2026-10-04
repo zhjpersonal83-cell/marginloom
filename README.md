@@ -4,6 +4,8 @@
 
 ### Evidence for when your model should defer.
 
+[![Quality gates](https://github.com/zhjpersonal83-cell/marginloom/actions/workflows/ci.yml/badge.svg)](https://github.com/zhjpersonal83-cell/marginloom/actions/workflows/ci.yml)
+
 A working AI reliability workbench: **predictions → calibration → decision policy → human review → reproducible report**.
 
 [Quick start](#run-in-one-command) · [Walkthrough](docs/product.md) · [Architecture](docs/architecture.md) · [Measured results](#measured-results-not-production-claims) · [Verification](docs/testing.md)
@@ -21,12 +23,14 @@ This is an executable research-and-engineering portfolio, developed with AI assi
 From the repository root, with Docker Engine and Compose v2 installed:
 
 ```bash
+git clone https://github.com/zhjpersonal83-cell/marginloom.git
+cd marginloom
 docker compose up --build
 ```
 
 Open **http://localhost:3000**. The app creates an isolated demo workspace. SQLite data persists in the named Docker volume; no account, database server or commercial key is required.
 
-**Validation note:** the Worker build, actual browser demo and local D1 integration suite were executed. Docker is unavailable in the authoring environment, so a dedicated CI job is supplied to verify the container after push; it is not claimed as locally verified. See [verification](docs/testing.md).
+**Verified:** all three [GitHub Actions jobs](https://github.com/zhjpersonal83-cell/marginloom/actions/runs/37196645885) passed on 2026-10-04: Web quality/build/API checks, Python research tests, and Docker build/startup/database health. Browser file-saving verification remains an explicit limitation. See [verification](docs/testing.md).
 
 For development, use Node **24**, pnpm **11.25.0** and Python **3.12**:
 
@@ -149,7 +153,7 @@ make typecheck
 make integration  # build, then real Worker + local D1 API checks
 ```
 
-The API suite checks session isolation, unauthorized access, CSRF, cross-origin writes, data leakage, persistence, policy/report consistency, correction validation, key rotation and audit evidence. Browser checks cover the real demo flow and mobile/laptop layouts. [Verification details](docs/testing.md) separate executed checks from pending hosted CI/container checks.
+The API suite checks session isolation, unauthorized access, CSRF, cross-origin writes, data leakage, persistence, policy/report consistency, correction validation, key rotation and audit evidence. Browser checks cover the real demo flow and mobile/laptop layouts. [Verification details](docs/testing.md) record the passing local and GitHub checks together with remaining limitations.
 
 ## Deployment and security
 

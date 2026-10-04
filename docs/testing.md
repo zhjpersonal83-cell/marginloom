@@ -1,6 +1,16 @@
 # Verification record
 
-Executed on 2026-10-04. This is a record of observed checks, not a certification or a claim that remote CI has run.
+Executed on 2026-10-04. This is a record of observed checks, not a certification.
+
+## GitHub Actions
+
+[Quality gates run 37196645885](https://github.com/zhjpersonal83-cell/marginloom/actions/runs/37196645885) passed all three jobs for commit `9d21ad3a5315239d550ce573bdf845f009534567`:
+
+- **web:** frozen dependency install, lint, typecheck, 17 TypeScript tests, production build and the 24 API/database checks.
+- **research:** clean Python 3.12 installation and 12 mathematical/parity tests.
+- **container:** Docker Compose build, container startup with both migrations, health check and HTTP database-health request.
+
+This documentation-only follow-up does not change the verified application code.
 
 ## Automated checks
 
@@ -42,8 +52,8 @@ Screenshots in `docs/screenshots/` are captures of the running app, not design m
 ## Explicitly unverified
 
 - A portable `scripts/serve.mjs` trial applied both migrations, then Wrangler failed while enumerating network interfaces (`uv_interface_addresses`, OS error 1) in this restricted container. The managed browser app and direct Miniflare integration run succeeded. The portable server process is therefore not marked end-to-end verified here.
-- Docker Engine is unavailable in the authoring environment. Dockerfile/Compose are reviewed and a dedicated container CI job is provided; a local container run is not claimed.
-- GitHub Actions status is pending until the new repository is created and pushed. Workflow configuration alone is not a passing run.
+- Docker Engine remains unavailable in the authoring environment. The Docker build/startup/health workflow has now passed in GitHub’s Ubuntu runner; it is not claimed to have run locally.
+- GitHub Actions has now run and passed; the exact run and application commit are recorded above.
 - No production load test, independent penetration test, screen-reader audit, cross-browser suite or dependency-vulnerability scan is claimed.
 - No external real-world dataset or clinical validation was performed. All displayed model results are synthetic demonstrations.
 
@@ -67,4 +77,4 @@ docker compose logs
 docker compose down
 ```
 
-Release gate: complete the container job, verify browser file saving, review dependency advisories, and test the exact deployment before exposing it to untrusted traffic. Production identity, retention controls and stronger OOD evaluation remain roadmap work.
+Remaining release gate: verify browser file saving, review dependency advisories, and test the exact deployment before exposing it to untrusted traffic. Production identity, retention controls and stronger OOD evaluation remain roadmap work.
