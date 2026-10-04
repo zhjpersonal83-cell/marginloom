@@ -90,9 +90,7 @@ export async function rateLimit(key: string, max = 60) {
   if (row && row.count > max)
     throw new HttpError(429, "Rate limit reached. Try again in a minute.");
 }
-export async function identity(
-  request: Request,
-): Promise<{
+export async function identity(request: Request): Promise<{
   workspace: string;
   role: "owner";
   kind: "api" | "demo" | "account";

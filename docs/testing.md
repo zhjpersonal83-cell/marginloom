@@ -41,6 +41,7 @@ Screenshots in `docs/screenshots/` are captures of the running app, not design m
 
 ## Explicitly unverified
 
+- A portable `scripts/serve.mjs` trial applied both migrations, then Wrangler failed while enumerating network interfaces (`uv_interface_addresses`, OS error 1) in this restricted container. The managed browser app and direct Miniflare integration run succeeded. The portable server process is therefore not marked end-to-end verified here.
 - Docker Engine is unavailable in the authoring environment. Dockerfile/Compose are reviewed and a dedicated container CI job is provided; a local container run is not claimed.
 - GitHub Actions status is pending until the new repository is created and pushed. Workflow configuration alone is not a passing run.
 - No production load test, independent penetration test, screen-reader audit, cross-browser suite or dependency-vulnerability scan is claimed.
