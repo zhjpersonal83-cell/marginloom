@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1791094830011,
+      "tag": "0000_ambitious_cammi",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1791095653144,
+      "tag": "0001_enforce_run_quota",
+      "breakpoints": true
+    }
+  ]
+}
