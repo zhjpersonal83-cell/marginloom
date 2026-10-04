@@ -1,5 +1,7 @@
 # Deployment
 
+For a Linux server, see [self-hosting](self-hosting.md): a dedicated Node.js HTTP service, native SQLite, static React frontend, systemd and Nginx. This is separate from the Wrangler demonstration below.
+
 ## Local development
 
 Node 24 / pnpm 11.25.0: `make install`, then `make dev`. The local D1 migrations are applied before the dev server starts at port 3000. No Cloudflare login or paid model key is needed. Keep `.wrangler/state` for persistence.

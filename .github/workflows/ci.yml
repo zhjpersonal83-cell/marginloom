@@ -40,6 +40,30 @@ jobs:
           node-version: 24
       - run: pip install -r requirements.txt
       - run: python -m unittest discover -s ml -v
+  selfhost:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.21.0
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build:selfhost
+      - run: pnpm test:selfhost
+      - run: bash -n deploy/install-ubuntu.sh deploy/enable-https.sh
+      - run: pnpm package:selfhost
+      - run: sudo apt-get update -qq && sudo apt-get install -y nginx openssl
+      - run: sudo --preserve-env=GITHUB_ACTIONS bash tests/install-selfhost.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Marginloom-Ubuntu-x64
+          path: artifacts/local/Marginloom-Ubuntu-x64.tar.gz
+          retention-days: 14
   container:
     runs-on: ubuntu-latest
     timeout-minutes: 20

@@ -213,6 +213,7 @@ export async function runApiSuite(fetchTransport = fetch) {
         checks,
         requests: samples.length,
         environment:
+          process.env.MARGINLOOM_TEST_ENV ||
           "local Miniflare Worker dispatch, sequential; not a network or load benchmark",
         medianMs: sorted[Math.floor(sorted.length * 0.5)],
         p95Ms: sorted[Math.floor(sorted.length * 0.95)],

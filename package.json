@@ -17,7 +17,10 @@
     "db:migrate": "node scripts/migrate-local.mjs",
     "test:integration": "node scripts/test-integration.mjs",
     "format": "prettier --write app lib/reliability lib/server.ts db tests docs README.md",
-    "format:check": "prettier --check app lib/reliability lib/server.ts db tests docs README.md"
+    "format:check": "prettier --check app lib/reliability lib/server.ts db tests docs README.md",
+    "build:selfhost": "node scripts/build-selfhost.mjs",
+    "test:selfhost": "node tests/selfhost.integration.mjs",
+    "package:selfhost": "node scripts/package-selfhost.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
@@ -55,6 +58,7 @@
     "@vitejs/plugin-react": "6.0.2",
     "@vitejs/plugin-rsc": "0.5.26",
     "drizzle-kit": "0.31.10",
+    "esbuild": "0.28.0",
     "eslint": "9.39.4",
     "eslint-config-next": "16.3.4",
     "json-rpc-2.0": "1.7.1",

@@ -20,6 +20,8 @@ This is an executable research-and-engineering portfolio, developed with AI assi
 
 ## Run in one command
 
+For an Ubuntu server with Nginx, use the [standalone Node.js + SQLite deployment](docs/self-hosting.md). Its prebuilt package includes Node and runs without Docker, build tools, or a Cloudflare account. The following Docker path remains a local demonstration.
+
 From the repository root, with Docker Engine and Compose v2 installed:
 
 ```bash

@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily Marginloom backup (keep three snapshots)
+
+[Timer]
+OnCalendar=daily
+RandomizedDelaySec=15m
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,36 @@
+[Unit]
+Description=Marginloom AI reliability workbench
+After=network.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=marginloom
+Group=marginloom
+WorkingDirectory=/opt/marginloom/current
+EnvironmentFile=/etc/marginloom/environment
+ExecStart=/opt/marginloom/current/runtime/node --max-old-space-size=192 server/server.mjs
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=15
+StateDirectory=marginloom
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/marginloom
+RestrictSUIDSGID=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+MemoryHigh=256M
+MemoryMax=384M
+MemorySwapMax=1G
+CPUQuota=100%
+TasksMax=64
+LogRateLimitIntervalSec=30s
+LogRateLimitBurst=100
+
+[Install]
+WantedBy=multi-user.target
