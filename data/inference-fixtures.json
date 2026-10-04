@@ -1,0 +1,386 @@
+[
+  {
+    "text": "I need a walkthrough for file uploads; this is a normal information request. Workspace: East. Channel: mobile.",
+    "logits": [
+      0.9230002154277394,
+      0.24073150466584947,
+      -1.1637317200935897
+    ],
+    "ensembleLogits": [
+      [
+        1.0902575415961917,
+        0.1415848511486657,
+        -1.231842392744871
+      ],
+      [
+        0.8730113872532996,
+        0.3132426267695835,
+        -1.1862540140229172
+      ],
+      [
+        0.8057317174337268,
+        0.26736703607929924,
+        -1.073098753512981
+      ]
+    ],
+    "probabilities": [
+      0.9859049979836053,
+      0.01409275627770858,
+      2.2457386859430263e-06
+    ],
+    "oodScore": 0.1875,
+    "disagreement": 0.004129517535380045
+  },
+  {
+    "text": "I need a waltkhrough for account access; this is a normal inforamtion request. Workspace: Remote. Channel: mobile.",
+    "logits": [
+      1.0524787187654132,
+      0.5002516421950051,
+      -1.55273036096042
+    ],
+    "ensembleLogits": [
+      [
+        1.1876630439966651,
+        0.44327516264760825,
+        -1.6309382066442895
+      ],
+      [
+        1.0576385905229908,
+        0.5107859166931994,
+        -1.5684245072162268
+      ],
+      [
+        0.9121345217765839,
+        0.5466938472442076,
+        -1.4588283690207435
+      ]
+    ],
+    "probabilities": [
+      0.9688784637483705,
+      0.031121448784875206,
+      8.746675417317915e-08
+    ],
+    "oodScore": 0.1875,
+    "disagreement": 0.0029871495820195104
+  },
+  {
+    "text": "Hello support team. We use the desktop browser and have included the relevant details below. I need a walkthrough for invoice exports; this is a normal information request. Workspace: Remote. Channel: desktop. The reference number is 95397. Thank you for reading the full request.",
+    "logits": [
+      0.9173150965796912,
+      0.24232117586842616,
+      -1.159636272448118
+    ],
+    "ensembleLogits": [
+      [
+        0.8219207587588442,
+        0.24746742247057896,
+        -1.0693881812294235
+      ],
+      [
+        1.052511710700704,
+        0.15427551898818836,
+        -1.2067872296889357
+      ],
+      [
+        0.8775128202795254,
+        0.32522058614651117,
+        -1.2027334064259945
+      ]
+    ],
+    "probabilities": [
+      0.98526149142799,
+      0.014736123386891401,
+      2.3851851186774168e-06
+    ],
+    "oodScore": 0.08571428571428572,
+    "disagreement": 0.002976349533618472
+  },
+  {
+    "text": "The urgent outage mentioned in our old ticket is resolved and is not the current issue. Current request: I need a walkthrough for invoice exports; this is a normal information request. Workspace: Central. Channel: mobile.",
+    "logits": [
+      0.7703382414380204,
+      0.4334475782217834,
+      -1.2037858196598163
+    ],
+    "ensembleLogits": [
+      [
+        0.6850997959503264,
+        0.577617649780945,
+        -1.2627174457312813
+      ],
+      [
+        0.7817118043270307,
+        0.439462623798756,
+        -1.221174428125838
+      ],
+      [
+        0.8442031240367043,
+        0.2832624610856491,
+        -1.1274655851223296
+      ]
+    ],
+    "probabilities": [
+      0.8906590115034387,
+      0.10933689848290445,
+      4.09001365672951e-06
+    ],
+    "oodScore": 0.10344827586206896,
+    "disagreement": 0.004000847569514465
+  },
+  {
+    "text": "Someone else wrote 'production down, urgent help' in a past example. Please handle this actual request: I need a walkthrough for data sync; this is a normal information request. Workspace: North. Channel: mobile.",
+    "logits": [
+      0.09352535317202837,
+      0.17042507392806913,
+      -0.26395042710010436
+    ],
+    "ensembleLogits": [
+      [
+        0.11797663059713703,
+        0.14451250108423286,
+        -0.26248913168139054
+      ],
+      [
+        0.025453045376551686,
+        0.38649672488106446,
+        -0.41194977025766555
+      ],
+      [
+        0.1371463835423964,
+        -0.019734004181089948,
+        -0.11741237936125709
+      ]
+    ],
+    "probabilities": [
+      0.3673621054281497,
+      0.59296554249776,
+      0.03967235207409029
+    ],
+    "oodScore": 0.10344827586206896,
+    "disagreement": 0.00750024193447385
+  },
+  {
+    "text": "I need a walkthrough for file uploads; this is a normal information request. Workspace: South. Channel: mobile.",
+    "logits": [
+      0.9247366622789012,
+      0.3081169932370881,
+      -1.2328536555159892
+    ],
+    "ensembleLogits": [
+      [
+        1.1044686789472715,
+        0.23162425270382891,
+        -1.3360929316511139
+      ],
+      [
+        0.8690066145716806,
+        0.43744322533894775,
+        -1.3064498399106612
+      ],
+      [
+        0.8007346933177514,
+        0.25528350166848757,
+        -1.0560181949861926
+      ]
+    ],
+    "probabilities": [
+      0.9789399201274126,
+      0.02105864543805524,
+      1.4344345321036496e-06
+    ],
+    "oodScore": 0.1875,
+    "disagreement": 0.005064535486481558
+  },
+  {
+    "text": "I need a walkthrough for API integration; this is a normal information request. Workspace: East. Chanenl: mboile.",
+    "logits": [
+      1.0477896784912664,
+      0.28031977548772957,
+      -1.3281094539789937
+    ],
+    "ensembleLogits": [
+      [
+        1.1477490075603185,
+        0.19819760402087894,
+        -1.345946611581211
+      ],
+      [
+        0.9573653538284657,
+        0.3743582281651787,
+        -1.331723581993673
+      ],
+      [
+        1.0382546740850152,
+        0.26840349427713106,
+        -1.3066581683620975
+      ]
+    ],
+    "probabilities": [
+      0.9916600959353845,
+      0.008339530826967013,
+      3.732376485630047e-07
+    ],
+    "oodScore": 0.1875,
+    "disagreement": 0.002328476813812541
+  },
+  {
+    "text": "Hello support team. We use the desktop browser and have included the relevant details below. I need a walkthrough for invoice exports; this is a normal information request. Workspace: East. Channel: browser. The reference number is 57682. Thank you for reading the full request.",
+    "logits": [
+      0.9249318575471234,
+      0.19700350713152828,
+      -1.121935364678653
+    ],
+    "ensembleLogits": [
+      [
+        0.8675735503356871,
+        0.15164361197428222,
+        -1.0192171623099697
+      ],
+      [
+        1.0206001928407455,
+        0.11588967130369843,
+        -1.1364898641444874
+      ],
+      [
+        0.8866218294649376,
+        0.3234772381166042,
+        -1.210099067581502
+      ]
+    ],
+    "probabilities": [
+      0.9893544523290492,
+      0.010642659191077859,
+      2.888479872885403e-06
+    ],
+    "oodScore": 0.08571428571428572,
+    "disagreement": 0.0024642882173813163
+  },
+  {
+    "text": "The urgent outage mentioned in our old ticket is resolved and is not the current issue. Current request: I need a walkthrough for file uploads; this is a normal information request. Workspace: South. Channel: desktop.",
+    "logits": [
+      0.7645710983523331,
+      0.3731133306650896,
+      -1.1376844290174326
+    ],
+    "ensembleLogits": [
+      [
+        0.8064617171928375,
+        0.41488245614857433,
+        -1.2213441733414179
+      ],
+      [
+        0.6999897825297253,
+        0.4959513351345397,
+        -1.195941117664312
+      ],
+      [
+        0.7872617953344362,
+        0.20850620071215487,
+        -0.995767996046568
+      ]
+    ],
+    "probabilities": [
+      0.9196194602690356,
+      0.08037393352164005,
+      6.606209324298048e-06
+    ],
+    "oodScore": 0.10344827586206896,
+    "disagreement": 0.0033136036872856156
+  },
+  {
+    "text": "An older note said 'ticket closed, repeated request' but that is background. Please handle this actual request: I need a walkthrough for report delivery; this is a normal information request. Workspace: Central. Channel: desktop.",
+    "logits": [
+      0.5528208303619856,
+      0.9515939232349181,
+      -1.5044147535968981
+    ],
+    "ensembleLogits": [
+      [
+        0.4935276218355591,
+        1.0840317125826324,
+        -1.5775593344182008
+      ],
+      [
+        0.4441083047613283,
+        0.9724410755120201,
+        -1.4165493802733853
+      ],
+      [
+        0.7208265644890696,
+        0.7983089816101019,
+        -1.5191355460991078
+      ]
+    ],
+    "probabilities": [
+      0.07707162175905206,
+      0.9229281672926063,
+      2.109483417079464e-07
+    ],
+    "oodScore": 0.10344827586206896,
+    "disagreement": 0.006281210887976063
+  },
+  {
+    "text": "I need a walkthrough for report delivery; this is a normal information request. Workspace: South. Channel: mobile.",
+    "logits": [
+      1.1150163782990667,
+      0.4283578489832573,
+      -1.5433742272823239
+    ],
+    "ensembleLogits": [
+      [
+        1.1956478265850963,
+        0.43456293821926983,
+        -1.6302107648043807
+      ],
+      [
+        1.0213152022189405,
+        0.520320542220821,
+        -1.541635744439796
+      ],
+      [
+        1.1280861060931637,
+        0.3301900665096811,
+        -1.458276172602795
+      ]
+    ],
+    "probabilities": [
+      0.9862818991857608,
+      0.013718036874165675,
+      6.394007339417208e-08
+    ],
+    "oodScore": 0.1875,
+    "disagreement": 0.0021133975567662056
+  },
+  {
+    "text": "I need a walkthrough for report delievry; this is a normal informaiton request. Worksapce: Remote. Channel: desktop.",
+    "logits": [
+      1.142635628971598,
+      0.3065718640587148,
+      -1.44920749303031
+    ],
+    "ensembleLogits": [
+      [
+        1.146466042318818,
+        0.35184823305535085,
+        -1.4983142753741803
+      ],
+      [
+        1.0920506671948664,
+        0.30340238256392094,
+        -1.395453049758817
+      ],
+      [
+        1.1893901774011097,
+        0.2644649765568725,
+        -1.4538551539579327
+      ]
+    ],
+    "probabilities": [
+      0.9945432510492366,
+      0.005456651375747716,
+      9.757501557493992e-08
+    ],
+    "oodScore": 0.25,
+    "disagreement": 0.0004960488400607144
+  }
+]

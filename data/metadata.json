@@ -1,0 +1,115 @@
+{
+  "schemaVersion": "1.0",
+  "name": "Marginloom synthetic support handling",
+  "classNames": [
+    "routine",
+    "frustrated",
+    "urgent"
+  ],
+  "synthetic": true,
+  "labelMeaning": {
+    "routine": "normal informational or setup support",
+    "frustrated": "author-assigned repeated or unresolved request requiring follow-up, not inferred emotion",
+    "urgent": "author-assigned active operational interruption needing immediate handling"
+  },
+  "limitations": [
+    "Synthetic author labels do not establish performance on real customer messages.",
+    "Lexical baseline cannot reliably understand negation or quoted context.",
+    "Disjoint template groups still share a hand-authored generation distribution.",
+    "Calibration and test metrics can worsen under distribution shift.",
+    "No artificial logit sharpening; temperature may be below one.",
+    "Threshold exploration on test data is descriptive, not an unbiased release guarantee."
+  ],
+  "splits": {
+    "train": {
+      "count": 720,
+      "classCounts": [
+        240,
+        240,
+        240
+      ],
+      "templateGroups": [
+        "class-0-family-00",
+        "class-0-family-01",
+        "class-0-family-02",
+        "class-0-family-03",
+        "class-0-family-04",
+        "class-0-family-05",
+        "class-1-family-00",
+        "class-1-family-01",
+        "class-1-family-02",
+        "class-1-family-03",
+        "class-1-family-04",
+        "class-1-family-05",
+        "class-2-family-00",
+        "class-2-family-01",
+        "class-2-family-02",
+        "class-2-family-03",
+        "class-2-family-04",
+        "class-2-family-05"
+      ],
+      "textSha256": "73524018c5010b0a1ad0172cf9d63565fb30fecac1ad7125f4c063dbe646e597"
+    },
+    "calibration": {
+      "count": 180,
+      "classCounts": [
+        60,
+        60,
+        60
+      ],
+      "templateGroups": [
+        "class-0-family-06",
+        "class-0-family-07",
+        "class-0-family-08",
+        "class-1-family-06",
+        "class-1-family-07",
+        "class-1-family-08",
+        "class-2-family-06",
+        "class-2-family-07",
+        "class-2-family-08"
+      ],
+      "textSha256": "deb2ad6eff45c42a81f3b4417e03326b5354c03c5d28e8e65a1eb8a90cbbbca4"
+    },
+    "test": {
+      "count": 360,
+      "classCounts": [
+        120,
+        120,
+        120
+      ],
+      "templateGroups": [
+        "class-0-family-09",
+        "class-0-family-10",
+        "class-0-family-11",
+        "class-1-family-09",
+        "class-1-family-10",
+        "class-1-family-11",
+        "class-2-family-09",
+        "class-2-family-10",
+        "class-2-family-11"
+      ],
+      "textSha256": "c9bd8d2127ef8a492bf38a159ac274741c7e272ece963b33302f3f0a350fc998"
+    }
+  },
+  "calibration": {
+    "temperature": 0.16061321115805655,
+    "calibrationCount": 180,
+    "nllBefore": 0.34674339369777996,
+    "nllAfter": 0.09792618103090264,
+    "bounds": [
+      0.05,
+      20
+    ],
+    "atBoundary": false
+  },
+  "metricConventions": {
+    "ece": "top-label ECE; 10 equal-width bins; [lower, upper), last includes 1; weighted by count",
+    "brier": "mean sum of squared class errors; range [0,2] for all class counts",
+    "nll": "natural-log NLL from stable log-softmax",
+    "macroF1": "fixed complete class list; zero_division=0",
+    "auroc": "macro one-vs-rest on probabilities; null if any class has no positives or negatives",
+    "disagreement": "Jensen-Shannon entropy gap across raw member probabilities, in nats",
+    "policy": "review if confidence < threshold OR novelty > threshold OR disagreement > threshold; missing extra signals do not trigger",
+    "riskCoverage": "confidence-only ranking, complete tied groups; zero coverage risk null; separate multi-signal operating point"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "description": "Learned pixel classifier on generated micrographs. Training, threshold tuning and test images are disjoint.",
+  "images": [
+    {
+      "id": "test_000",
+      "image": "/vision/test_000.png",
+      "mask": "/vision/test_000_mask.png",
+      "prediction": "/vision/test_000_prediction.png",
+      "uncertainty": "/vision/test_000_entropy.png",
+      "dice": 0.9548916227299356,
+      "iou": 0.9136771300448431,
+      "slice": "held-out synthetic"
+    },
+    {
+      "id": "test_001",
+      "image": "/vision/test_001.png",
+      "mask": "/vision/test_001_mask.png",
+      "prediction": "/vision/test_001_prediction.png",
+      "uncertainty": "/vision/test_001_entropy.png",
+      "dice": 0.9634854771784233,
+      "iou": 0.9295436349079264,
+      "slice": "held-out synthetic"
+    },
+    {
+      "id": "test_002",
+      "image": "/vision/test_002.png",
+      "mask": "/vision/test_002_mask.png",
+      "prediction": "/vision/test_002_prediction.png",
+      "uncertainty": "/vision/test_002_entropy.png",
+      "dice": 0.9718111346018323,
+      "iou": 0.9451679232350926,
+      "slice": "held-out synthetic"
+    },
+    {
+      "id": "test_003",
+      "image": "/vision/test_003.png",
+      "mask": "/vision/test_003_mask.png",
+      "prediction": "/vision/test_003_prediction.png",
+      "uncertainty": "/vision/test_003_entropy.png",
+      "dice": 0.9488109633212415,
+      "iou": 0.9026073619631901,
+      "slice": "held-out synthetic"
+    },
+    {
+      "id": "test_004",
+      "image": "/vision/test_004.png",
+      "mask": "/vision/test_004_mask.png",
+      "prediction": "/vision/test_004_prediction.png",
+      "uncertainty": "/vision/test_004_entropy.png",
+      "dice": 0.9758454106280193,
+      "iou": 0.9528301886792453,
+      "slice": "held-out synthetic"
+    },
+    {
+      "id": "test_005",
+      "image": "/vision/test_005.png",
+      "mask": "/vision/test_005_mask.png",
+      "prediction": "/vision/test_005_prediction.png",
+      "uncertainty": "/vision/test_005_entropy.png",
+      "dice": 0.9430667132378624,
+      "iou": 0.8922670191672174,
+      "slice": "held-out synthetic"
+    },
+    {
+      "id": "test_006",
+      "image": "/vision/test_006.png",
+      "mask": "/vision/test_006_mask.png",
+      "prediction": "/vision/test_006_prediction.png",
+      "uncertainty": "/vision/test_006_entropy.png",
+      "dice": 0.9423808131032466,
+      "iou": 0.8910398230088495,
+      "slice": "held-out synthetic"
+    },
+    {
+      "id": "test_007",
+      "image": "/vision/test_007.png",
+      "mask": "/vision/test_007_mask.png",
+      "prediction": "/vision/test_007_prediction.png",
+      "uncertainty": "/vision/test_007_entropy.png",
+      "dice": 0.9553437029603613,
+      "iou": 0.914505283381364,
+      "slice": "held-out synthetic"
+    },
+    {
+      "id": "test_008",
+      "image": "/vision/test_008.png",
+      "mask": "/vision/test_008_mask.png",
+      "prediction": "/vision/test_008_prediction.png",
+      "uncertainty": "/vision/test_008_entropy.png",
+      "dice": 0.9326473339569691,
+      "iou": 0.873794916739702,
+      "slice": "held-out synthetic"
+    },
+    {
+      "id": "test_009",
+      "image": "/vision/test_009.png",
+      "mask": "/vision/test_009_mask.png",
+      "prediction": "/vision/test_009_prediction.png",
+      "uncertainty": "/vision/test_009_entropy.png",
+      "dice": 0.974,
+      "iou": 0.949317738791423,
+      "slice": "held-out synthetic"
+    }
+  ],
+  "summary": {
+    "dice": 0.9562283171717892,
+    "iou": 0.9164751019918853
+  }
+}
