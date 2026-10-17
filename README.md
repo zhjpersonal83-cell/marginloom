@@ -8,7 +8,7 @@
 
 A working AI reliability workbench: **predictions → calibration → decision policy → human review → reproducible report**.
 
-[Quick start](#run-in-one-command) · [Walkthrough](docs/product.md) · [Architecture](docs/architecture.md) · [Measured results](#measured-results-not-production-claims) · [Verification](docs/testing.md)
+[Live application](https://marginloom.zhongjiehuang.com/) · [Source](https://github.com/zhjpersonal83-cell/marginloom) · [Quick start](#run-in-one-command) · [Walkthrough](docs/product.md) · [Architecture](docs/architecture.md) · [Measured results](#measured-results-not-production-claims) · [Verification](docs/testing.md)
 
 </div>
 
@@ -21,6 +21,8 @@ This is an executable research-and-engineering portfolio, developed with AI assi
 ## Run in one command
 
 For an Ubuntu server with Nginx, use the [standalone Node.js + SQLite deployment](docs/self-hosting.md). Its prebuilt package includes Node and runs without Docker, build tools, or a Cloudflare account. The following Docker path remains a local demonstration.
+
+The [live deployment](https://marginloom.zhongjiehuang.com/) was checked on 2026-10-17 against source commit `d18d722ce70d9d0c426abb508b4022d1fc5a9510`. All 67 release-file checksums matched, and the health endpoint reported version `0.1.0` with the database ready. See the [deployment record](docs/production-status.md) for the scope of this check.
 
 From the repository root, with Docker Engine and Compose v2 installed:
 
@@ -160,6 +162,7 @@ The API suite checks session isolation, unauthorized access, CSRF, cross-origin 
 ## Deployment and security
 
 - **Local demo:** one container, local Worker runtime and persistent SQLite. Binds localhost by default.
+- **Live standalone deployment:** Node.js + SQLite behind Nginx at [marginloom.zhongjiehuang.com](https://marginloom.zhongjiehuang.com/), using the [self-hosting configuration](docs/self-hosting.md).
 - **Hosted:** Workers-compatible ESM with D1 migrations. A private hosted preview is protected by the platform; browser workspaces remain isolated within it.
 - **Production adoption:** add durable recoverable accounts, team membership/RBAC, retention and backups, abuse-resistant ingress and an independently validated dataset/policy process.
 
