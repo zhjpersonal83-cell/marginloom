@@ -49,3 +49,7 @@ Configure MySQL using a private Tomcat Context or MARGINLOOM_DB_URL, MARGINLOOM_
 Synthetic, non-commercial research and engineering demonstration, developed with AI assistance. Existing limitations remain: synthetic metrics do not establish real-world safety, interactive threshold exploration is not independent validation, and human reviews do not rewrite benchmark labels. No fabricated learning or benchmark improvement.
 
 Historical deployment records describe the superseded implementations. Current operation is documented in [Java Web migration](docs/JAVA_WEB_MIGRATION.md). First-party licensing and retained third-party notices remain in force.
+
+## Optional research reproduction
+
+Install `src/main/Python/requirements.txt` in a separate Python 3.12 environment, then run `make reproduce` and `make research-test`. The exporter updates Java model resources and vision assets from the original deterministic experiments. Run `mvn verify` before accepting regenerated assets; parity fixtures are preserved as independent references. Python is not part of the deployed request path.
