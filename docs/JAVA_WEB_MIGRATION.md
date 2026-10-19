@@ -43,7 +43,7 @@ Initialize schema with an offline maintenance identity:
 java -cp 'WEB-INF/classes:WEB-INF/lib/*' DatabaseService.Migrate
 ```
 
-Use a dedicated MySQL schema and a runtime identity limited to DML on that schema. Workspaces are locked with SELECT FOR UPDATE before checking/inserting a run, making the 30-run quota transactional. API-key rotation is also serialized per workspace. Session, run, review and audit data are scoped to the authenticated workspace.
+Use a dedicated MySQL schema with utf8mb4_bin collation (see deploy/mysql-database.sql) and a runtime identity limited to DML on that schema. Case-sensitive record IDs preserve the original SQLite review semantics. For a pre-existing schema, verify the reviews.record_id column also uses utf8mb4_bin before importing. Workspaces are locked with SELECT FOR UPDATE before checking/inserting a run, making the 30-run quota transactional. API-key rotation is also serialized per workspace. Session, run, review and audit data are scoped to the authenticated workspace.
 
 ## Migration and rollback
 
