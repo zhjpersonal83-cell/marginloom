@@ -1,3 +1,5 @@
+> Historical record from before the Java Web migration. For the current runtime, structure, build, tests and deployment, see [Java Web migration](JAVA_WEB_MIGRATION.md).
+
 # Database
 
 D1 uses SQLite. Local Docker/dev uses Wrangler's persisted SQLite-backed D1 emulator. Schema lives in `db/schema.ts`; generated SQL is in `drizzle/`.

@@ -1,0 +1,555 @@
+[
+  {
+    "name": "uniform",
+    "rows": [
+      {
+        "id": "0",
+        "label": 0,
+        "logits": [
+          0,
+          0,
+          0
+        ],
+        "split": "test",
+        "slice": "fixture"
+      },
+      {
+        "id": "1",
+        "label": 1,
+        "logits": [
+          0,
+          0,
+          0
+        ],
+        "split": "test",
+        "slice": "fixture"
+      },
+      {
+        "id": "2",
+        "label": 2,
+        "logits": [
+          0,
+          0,
+          0
+        ],
+        "split": "test",
+        "slice": "fixture"
+      }
+    ],
+    "temperature": 1.0,
+    "expected": {
+      "count": 3,
+      "accuracy": 0.3333333333333333,
+      "macroF1": 0.16666666666666666,
+      "nll": 1.0986122886681098,
+      "brier": 0.6666666666666666,
+      "ece": 0.0,
+      "aurocMacroOvr": 0.5,
+      "aurocPerClass": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "classCounts": [
+        1,
+        1,
+        1
+      ],
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 3,
+          "accuracy": 0.3333333333333333,
+          "confidence": 0.3333333333333333
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        }
+      ]
+    }
+  },
+  {
+    "name": "moderate",
+    "rows": [
+      {
+        "id": "0",
+        "label": 0,
+        "logits": [
+          2,
+          0,
+          -1
+        ],
+        "split": "test",
+        "slice": "fixture"
+      },
+      {
+        "id": "1",
+        "label": 1,
+        "logits": [
+          -1,
+          2,
+          0
+        ],
+        "split": "test",
+        "slice": "fixture"
+      },
+      {
+        "id": "2",
+        "label": 2,
+        "logits": [
+          0,
+          2,
+          1
+        ],
+        "split": "test",
+        "slice": "fixture"
+      },
+      {
+        "id": "3",
+        "label": 2,
+        "logits": [
+          1,
+          0,
+          2
+        ],
+        "split": "test",
+        "slice": "fixture"
+      }
+    ],
+    "temperature": 1.0,
+    "expected": {
+      "count": 4,
+      "accuracy": 0.75,
+      "macroF1": 0.7777777777777777,
+      "nll": 0.538725992000333,
+      "brier": 0.31988955262780816,
+      "ece": 0.16072311064674116,
+      "aurocMacroOvr": 1.0,
+      "aurocPerClass": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "classCounts": [
+        1,
+        1,
+        2
+      ],
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 2,
+          "accuracy": 0.5,
+          "confidence": 0.6652409557748218
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 2,
+          "accuracy": 1.0,
+          "confidence": 0.8437947344813395
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        }
+      ]
+    }
+  },
+  {
+    "name": "ties",
+    "rows": [
+      {
+        "id": "0",
+        "label": 0,
+        "logits": [
+          1,
+          1,
+          1
+        ],
+        "split": "test",
+        "slice": "fixture"
+      },
+      {
+        "id": "1",
+        "label": 1,
+        "logits": [
+          1,
+          1,
+          1
+        ],
+        "split": "test",
+        "slice": "fixture"
+      },
+      {
+        "id": "2",
+        "label": 2,
+        "logits": [
+          1,
+          1,
+          1
+        ],
+        "split": "test",
+        "slice": "fixture"
+      },
+      {
+        "id": "3",
+        "label": 0,
+        "logits": [
+          1,
+          1,
+          1
+        ],
+        "split": "test",
+        "slice": "fixture"
+      },
+      {
+        "id": "4",
+        "label": 1,
+        "logits": [
+          1,
+          1,
+          1
+        ],
+        "split": "test",
+        "slice": "fixture"
+      },
+      {
+        "id": "5",
+        "label": 2,
+        "logits": [
+          1,
+          1,
+          1
+        ],
+        "split": "test",
+        "slice": "fixture"
+      }
+    ],
+    "temperature": 1.0,
+    "expected": {
+      "count": 6,
+      "accuracy": 0.3333333333333333,
+      "macroF1": 0.16666666666666666,
+      "nll": 1.0986122886681098,
+      "brier": 0.6666666666666669,
+      "ece": 0.0,
+      "aurocMacroOvr": 0.5,
+      "aurocPerClass": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "classCounts": [
+        2,
+        2,
+        2
+      ],
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 6,
+          "accuracy": 0.3333333333333333,
+          "confidence": 0.3333333333333333
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        }
+      ]
+    }
+  },
+  {
+    "name": "missing-class",
+    "rows": [
+      {
+        "id": "0",
+        "label": 0,
+        "logits": [
+          2,
+          0,
+          -1
+        ],
+        "split": "test",
+        "slice": "fixture"
+      },
+      {
+        "id": "1",
+        "label": 1,
+        "logits": [
+          0,
+          2,
+          -1
+        ],
+        "split": "test",
+        "slice": "fixture"
+      }
+    ],
+    "temperature": 1.0,
+    "expected": {
+      "count": 2,
+      "accuracy": 1.0,
+      "macroF1": 0.6666666666666666,
+      "nll": 0.16984601955628567,
+      "brier": 0.03920547419483113,
+      "ece": 0.15620526551866054,
+      "aurocMacroOvr": null,
+      "aurocPerClass": [
+        1.0,
+        1.0,
+        null
+      ],
+      "classCounts": [
+        1,
+        1,
+        0
+      ],
+      "bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 2,
+          "accuracy": 1.0,
+          "confidence": 0.8437947344813395
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 0,
+          "accuracy": null,
+          "confidence": null
+        }
+      ]
+    }
+  }
+]

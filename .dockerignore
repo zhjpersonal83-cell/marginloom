@@ -1,11 +1,5 @@
-node_modules
 .git
+target
 .env*
 !.env.example
-.sites-runtime
-.wrangler
-dist
-.next
-*.tsbuildinfo
-ml/**/__pycache__
-upload
+**/__pycache__

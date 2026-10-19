@@ -1,3 +1,5 @@
+> Historical record from before the Java Web migration. For the current runtime, structure, build, tests and deployment, see [Java Web migration](JAVA_WEB_MIGRATION.md).
+
 # Third-party notices
 
 First-party Marginloom code, synthetic data and model exports use MIT. Existing upstream notices remain with vendored files.

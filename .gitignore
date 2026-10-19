@@ -55,3 +55,9 @@ artifacts/local/
 
 # Verified deployment bundle is included in the owner's ZIP, not Git history.
 /deploy/releases/*.tar.gz
+
+# Java Web migration
+target/
+.env*
+!.env.example
+*.log

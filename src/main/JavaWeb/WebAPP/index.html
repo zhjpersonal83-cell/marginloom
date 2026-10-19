@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="AI reliability workbench for calibration, selective prediction, human review and reproducible evidence."
+    />
+    <title>Marginloom — Evidence for when your model should defer.</title>
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <script defer src="assets/js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <aside id="sidebar">
+      <a class="brand" href="?view=overview">▧ Marginloom</a>
+      <p>Evidence for when your model should defer.</p>
+      <div class="workspace-switch">
+        <strong>My reliability workspace</strong
+        ><span>Private demo · owner</span>
+      </div>
+      <nav id="navigation" aria-label="Workbench"></nav>
+      <button id="developer">Developer access</button
+      ><small
+        >Synthetic research data<br />Exploratory policies, not release
+        certification.</small
+      >
+    </aside>
+    <div class="shell">
+      <header>
+        <button id="menu" aria-label="Toggle navigation">☰</button
+        ><span>Workspace / <b id="breadcrumb">Overview</b></span>
+        <div>
+          <button id="import-open" class="button secondary">
+            Import predictions</button
+          ><button id="export" class="button primary">Export report ↓</button>
+        </div>
+      </header>
+      <main id="content">
+        <div class="page-heading">
+          <div>
+            <span class="eyebrow">AI RELIABILITY WORKBENCH</span>
+            <h1 id="heading">Overview</h1>
+            <p id="description">
+              Inspect confidence. Decide when to defer. Keep the evidence.
+            </p>
+          </div>
+          <span class="badge">Synthetic · reproducible</span>
+        </div>
+        <p id="status" role="status"></p>
+        <p id="error" role="alert"></p>
+        <section id="policy-panel" class="panel">
+          <div class="panel-heading">
+            <div>
+              <h2>Decision policy</h2>
+              <p>Explore confidence, disagreement and unfamiliar vocabulary.</p>
+            </div>
+            <button id="save-policy" class="button secondary">
+              Save policy snapshot
+            </button>
+          </div>
+          <div class="policy-grid">
+            <label
+              >Minimum confidence <output id="threshold-value">80%</output
+              ><input
+                id="threshold"
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.8" /></label
+            ><label
+              >Maximum disagreement
+              <output id="maxDisagreement-value">0.12</output
+              ><input
+                id="maxDisagreement"
+                type="range"
+                min="0"
+                max="2.5"
+                step="0.01"
+                value="0.12" /></label
+            ><label
+              >Maximum vocabulary novelty <output id="maxOod-value">65%</output
+              ><input
+                id="maxOod"
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value="0.65"
+            /></label>
+          </div>
+          <p class="footnote">
+            Threshold exploration on test labels is descriptive, not independent
+            release validation.
+          </p>
+        </section>
+        <div id="view"></div>
+        <footer>
+          Marginloom · Personal research and engineering portfolio · Built with
+          AI assistance.
+        </footer>
+      </main>
+    </div>
+    <dialog id="import-dialog">
+      <form method="dialog">
+        <button class="close" aria-label="Close import">×</button>
+        <h2>Import prediction bundle</h2>
+        <p>
+          20–2,000 records; disjoint calibration and test data. No private data.
+        </p>
+        <label for="upload-file">Choose JSON file</label
+        ><input
+          id="upload-file"
+          type="file"
+          accept="application/json,.json"
+        /><label for="upload">Or paste prediction JSON</label
+        ><textarea
+          id="upload"
+          rows="10"
+          placeholder='{"name":"My predictions","classNames":[...],"rows":[...]}'
+        ></textarea
+        ><button type="button" id="download-demo" class="button secondary">
+          Download demo bundle</button
+        ><button type="button" id="import" class="button primary">
+          Evaluate &amp; save
+        </button>
+      </form>
+    </dialog>
+    <dialog id="review-dialog">
+      <form method="dialog">
+        <button class="close" aria-label="Close review">×</button>
+        <h2>Review prediction</h2>
+        <div id="selected-record"></div>
+        <label for="review-note">Review note</label
+        ><textarea id="review-note" maxlength="500" rows="4"></textarea>
+        <div class="review-actions">
+          <button
+            type="button"
+            data-decision="confirmed"
+            class="button primary"
+          >
+            Confirm</button
+          ><button
+            type="button"
+            data-decision="corrected"
+            class="button secondary"
+          >
+            Record correction</button
+          ><button
+            type="button"
+            data-decision="needs-context"
+            class="button secondary"
+          >
+            Needs context
+          </button>
+        </div>
+        <p>
+          Corrections require a note and never change original benchmark labels.
+        </p>
+      </form>
+    </dialog>
+    <dialog id="developer-dialog">
+      <form method="dialog">
+        <button class="close" aria-label="Close developer access">×</button>
+        <h2>Developer access</h2>
+        <p>
+          Generate a workspace-scoped API key. Rotation immediately revokes the
+          previous key. The new key is shown once.
+        </p>
+        <button id="key" type="button" class="button primary">
+          Generate / rotate API key
+        </button>
+        <pre id="api-key"></pre>
+        <p>
+          Use <code>Authorization: Bearer YOUR_KEY</code> with
+          <code>POST api/evaluate</code> or <code>POST api/predict</code>.
+        </p>
+      </form>
+    </dialog>
+  </body>
+</html>

@@ -1,3 +1,5 @@
+> Historical record from before the Java Web migration. For the current runtime, structure, build, tests and deployment, see [Java Web migration](JAVA_WEB_MIGRATION.md).
+
 # Marginloom: market research and product rationale
 
 Research checked: **4 October 2026**. Product decision: **Marginloom**, a model-output reliability workbench. Initial demonstration: a key-free synthetic support classifier, with a synthetic segmentation companion that connects to the creator's computer-vision research.

@@ -1,3 +1,5 @@
+> Historical record from before the Java Web migration. For the current runtime, structure, build, tests and deployment, see [Java Web migration](JAVA_WEB_MIGRATION.md).
+
 # Self-hosting on Ubuntu
 
 This deployment serves the same React workbench and API using a standalone Node.js HTTP process and SQLite. It does not run Wrangler or a development server. The frontend is a static Vite build; the existing API and reliability engine are bundled with a small SQLite adapter. No npm install, Python, Docker, Cloudflare login, paid model API, or build step is needed on the target host.
